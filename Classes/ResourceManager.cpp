@@ -27,6 +27,13 @@ void ResourceManager::load(const std::vector<std::string> &groups)
     _pLoader->startLoad();
 }
 
+void ResourceManager::load(const std::string &group)
+{
+    std::vector<std::string> groups;
+    groups.push_back(group);
+    load(groups);
+}
+
 void ResourceManager::cacheRef(const std::string &fileName, cocos2d::Ref* ref)
 {
     if (_mapRefCache.find(fileName) == _mapRefCache.end())
