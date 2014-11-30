@@ -61,6 +61,11 @@ void ResourceConfig::loadConfig(const std::string &config)
     }
 }
 
+auto ResourceConfig::getGroup(const std::string &group) -> const ResourceTypeArrayMap&
+{
+    return _resource[group];
+}
+
 void ResourceConfig::dump()
 {
     if (_resource.empty())

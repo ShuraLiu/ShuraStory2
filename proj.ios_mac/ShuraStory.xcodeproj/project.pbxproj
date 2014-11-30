@@ -10,6 +10,7 @@
 		1A1D8A9D1A2770CF00804D47 /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D8A9B1A2770CF00804D47 /* ResourceManager.cpp */; };
 		1A1D8AA11A2773D700804D47 /* ResourceConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D8A9F1A2773D700804D47 /* ResourceConfig.cpp */; };
 		1A1D8AA31A27787B00804D47 /* ResourceConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1A1D8AA21A27787B00804D47 /* ResourceConfig.xml */; };
+		1A6182931A2AABEA002BC80B /* ResourceLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6182911A2AABEA002BC80B /* ResourceLoader.cpp */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -108,6 +109,9 @@
 		1A1D8A9F1A2773D700804D47 /* ResourceConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceConfig.cpp; sourceTree = "<group>"; };
 		1A1D8AA01A2773D700804D47 /* ResourceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceConfig.h; sourceTree = "<group>"; };
 		1A1D8AA21A27787B00804D47 /* ResourceConfig.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ResourceConfig.xml; sourceTree = "<group>"; };
+		1A6182911A2AABEA002BC80B /* ResourceLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceLoader.cpp; sourceTree = "<group>"; };
+		1A6182921A2AABEA002BC80B /* ResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceLoader.h; sourceTree = "<group>"; };
+		1AB379371A2B32700011D57D /* CustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEvent.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -233,12 +237,22 @@
 		1A1D8A9A1A276FF800804D47 /* global */ = {
 			isa = PBXGroup;
 			children = (
+				1AB379371A2B32700011D57D /* CustomEvent.h */,
+			);
+			name = global;
+			sourceTree = "<group>";
+		};
+		1A6182901A2AAB8B002BC80B /* resouce_config */ = {
+			isa = PBXGroup;
+			children = (
 				1A1D8A9B1A2770CF00804D47 /* ResourceManager.cpp */,
 				1A1D8A9C1A2770CF00804D47 /* ResourceManager.h */,
 				1A1D8A9F1A2773D700804D47 /* ResourceConfig.cpp */,
 				1A1D8AA01A2773D700804D47 /* ResourceConfig.h */,
+				1A6182911A2AABEA002BC80B /* ResourceLoader.cpp */,
+				1A6182921A2AABEA002BC80B /* ResourceLoader.h */,
 			);
-			name = global;
+			name = resouce_config;
 			sourceTree = "<group>";
 		};
 		1AC6FAE6180E9839004C840B /* Products */ = {
@@ -303,6 +317,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1A6182901A2AAB8B002BC80B /* resouce_config */,
 				1A1D8A9A1A276FF800804D47 /* global */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
@@ -509,6 +524,7 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				1A6182931A2AABEA002BC80B /* ResourceLoader.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,

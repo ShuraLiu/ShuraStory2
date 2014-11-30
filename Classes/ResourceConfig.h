@@ -18,6 +18,7 @@ class ResourceConfig
     constexpr static const char* GROUP_TYPE = "Group";
     constexpr static const char* GROUP_ID = "id";
     
+public:
     typedef std::map<std::string, std::string> Attributes;
     typedef std::vector<Attributes> ResourceArray;
     typedef std::map<std::string, ResourceArray> ResourceTypeArrayMap;
@@ -25,6 +26,7 @@ class ResourceConfig
     
 public:
     void loadConfig(const std::string& config);
+    const ResourceTypeArrayMap& getGroup(const std::string& group);
     void dump();
     
 public:
