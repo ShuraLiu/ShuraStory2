@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "ResourceConfig.h"
 
 USING_NS_CC;
 
@@ -30,6 +31,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
         glview = GLViewImpl::create("My Game");
         director->setOpenGLView(glview);
     }
+    
+    ResourceConfig::getInstance().loadConfig("ResourceConfig.xml");
+    ResourceConfig::getInstance().dump();
 
     // turn on display FPS
     director->setDisplayStats(true);
