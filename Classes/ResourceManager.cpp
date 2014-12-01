@@ -34,33 +34,68 @@ void ResourceManager::load(const std::string &group)
     load(groups);
 }
 
-void ResourceManager::cacheRef(const std::string &fileName, cocos2d::Ref* ref)
+void ResourceManager::cacheTexture(const std::string &groupID, const std::string &fileName, cocos2d::Texture2D *tex)
 {
-    if (_mapRefCache.find(fileName) == _mapRefCache.end())
-    {
-        _mapRefCache[fileName] = ref;
-    }
-    ref->retain();
+    auto pInfo = getCacheInfo(groupID);
+    pInfo->textureCache[fileName] = tex;
+    tex->retain();
 }
 
-void ResourceManager::releaseRef(const std::string &fileName)
+void ResourceManager::cacheFontAtlas(const std::string &groupID, const std::string &fileName, cocos2d::FontAtlas *atlas)
 {
-    auto iter = _mapRefCache.find(fileName);
-    if (iter != _mapRefCache.end())
-    {
-        (*iter).second->release();
-    }
+    auto pInfo = getCacheInfo(groupID);
+    pInfo->fontAtlasCache[fileName] = atlas;
+    atlas->retain();
 }
 
-void ResourceManager::cacheSpriteFrameRef(const std::string &fileName)
+void ResourceManager::cacheSpriteFrame(const std::string &groupID, const std::string &name)
 {
-    if (_spriteFrameRefCache.find(fileName) == _spriteFrameRefCache.end())
+    auto pInfo = getCacheInfo(groupID);
+    pInfo->spriteFrameCache.push_back(name);
+    auto iter = _spriteFrameReferenceMap.find(name);
+    if (iter == _spriteFrameReferenceMap.end())
     {
-        _spriteFrameRefCache[fileName] = 1;
+        _spriteFrameReferenceMap[name] = 1;
     }
     else
     {
-        ++_spriteFrameRefCache[fileName];
+        ++_spriteFrameReferenceMap[name];
+    }
+}
+
+void ResourceManager::release(const std::string &groupID)
+{
+    auto iter = _cache.find(groupID);
+    if (iter != _cache.end())
+    {
+        auto pInfo = (*iter).second;
+        auto& textureCache = pInfo->textureCache;
+        auto texIter = textureCache.begin();
+        auto texEnd = textureCache.end();
+        while (texIter != texEnd)
+        {
+            (*texIter).second->release();
+            textureCache.erase(texIter);
+        }
+        auto& fontAtlasCache = pInfo->fontAtlasCache;
+        auto fontIter = fontAtlasCache.begin();
+        auto fontEnd = fontAtlasCache.end();
+        while (fontIter != fontEnd)
+        {
+            (*fontIter).second->release();
+            fontAtlasCache.erase(fontIter);
+        }
+        auto& spriteFrameCache = pInfo->spriteFrameCache;
+        for (auto& spriteFrame : spriteFrameCache)
+        {
+            --_spriteFrameReferenceMap[spriteFrame];
+            if (_spriteFrameReferenceMap[spriteFrame] == 0)
+            {
+                cocos2d::SpriteFrameCache::getInstance()->removeSpriteFramesFromFile(spriteFrame);
+            }
+        }
+        delete (*iter).second;
+        _cache.erase(iter);
     }
 }
 
@@ -82,4 +117,14 @@ void ResourceManager::onLoadProgressCallback(int cur, int total)
 {
     custom_event::ResourceLoadProgressEvent<custom_event::IDResourceLoadProgressEvent::Progress> event(cur, total);
     custom_event::dispatch(event);
+}
+
+auto ResourceManager::getCacheInfo(const std::string &groupID) -> CacheInfo*
+{
+    auto iter = _cache.find(groupID);
+    if (iter == _cache.end())
+    {
+        _cache[groupID] = new CacheInfo();
+    }
+    return _cache[groupID];
 }

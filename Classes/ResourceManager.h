@@ -15,8 +15,14 @@ class ResourceLoader;
 
 class ResourceManager
 {
-    typedef std::map<std::string, cocos2d::Ref*> RefCacheMap;
-    typedef std::map<std::string, int> ResourceRefMap;
+    typedef std::map<std::string, int> SpriteFrameReferenceMap;
+    struct CacheInfo
+    {
+        std::map<std::string, cocos2d::Texture2D*> textureCache;
+        std::vector<std::string> spriteFrameCache;
+        std::map<std::string, cocos2d::FontAtlas*> fontAtlasCache;
+    };
+    
 public:
     CC_DISALLOW_COPY_AND_ASSIGN(ResourceManager)
     virtual ~ResourceManager();
@@ -29,22 +35,24 @@ public:
     
     void load(const std::vector<std::string>& groups);
     void load(const std::string& group);
-    void cacheRef(const std::string& fileName, cocos2d::Ref* ref);
-    void cacheSpriteFrameRef(const std::string& fileName);
+    void release(const std::string& groupID);
+    void cacheTexture(const std::string& groupID, const std::string& fileName, cocos2d::Texture2D* tex);
+    void cacheFontAtlas(const std::string& groupID, const std::string& fileName, cocos2d::FontAtlas* atlas);
+    void cacheSpriteFrame(const std::string& groupID, const std::string& name);
     
 private:
-    void releaseRef(const std::string& fileName);
     void onLoadStartCallback();
     void onLoadEndCallback();
     void onLoadProgressCallback(int cur, int total);
+    CacheInfo* getCacheInfo(const std::string& groupID);
     
 private:
     ResourceManager();
     
 private:
     ResourceLoader* _pLoader;
-    RefCacheMap _mapRefCache;
-    ResourceRefMap _spriteFrameRefCache;
+    std::map<std::string, CacheInfo*> _cache;
+    SpriteFrameReferenceMap _spriteFrameReferenceMap;
 };
 
 namespace custom_event
