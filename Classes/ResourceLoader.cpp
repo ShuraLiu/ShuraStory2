@@ -101,7 +101,8 @@ cocos2d::Texture2D::PixelFormat ResourceLoader::translateTextureFormat(const std
 
 void ResourceLoader::onAsyncTextureLoadCallback(cocos2d::Texture2D* tex)
 {
-    ResourceManager::getInstance().cacheRef(_arrayTextures.at(_textureLoadProgress).fileName, tex);
+    auto& textureInfo = _arrayTextures.at(_textureLoadProgress);
+    ResourceManager::getInstance().cacheTexture(textureInfo.groupID, textureInfo.fileName, tex);
     ++_textureLoadProgress;
     ++_curResourceCount;
     notifyProgress();
@@ -120,18 +121,19 @@ void ResourceLoader::loadResourcePerFrame(float dt)
 {
     if (!_arraySpriteFrames.empty() && _spriteLoadProgress != _arraySpriteFrames.size())
     {
-        const std::string& fullPathName = cocos2d::FileUtils::getInstance()->fullPathForFilename(_arraySpriteFrames.at(_spriteLoadProgress).fileName);
+        auto& spriteFrameInfo = _arraySpriteFrames.at(_spriteLoadProgress);
+        const std::string& fullPathName = cocos2d::FileUtils::getInstance()->fullPathForFilename(spriteFrameInfo.fileName);
         cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile(fullPathName);
-        ResourceManager::getInstance().cacheSpriteFrameRef(fullPathName);
+        ResourceManager::getInstance().cacheSpriteFrame(spriteFrameInfo.groupID, fullPathName);
         ++_spriteLoadProgress;
         ++_curResourceCount;
         notifyProgress();
     }
     else if (!_arrayBitmapFonts.empty() && _bitmapFontLoadProgress != _arrayBitmapFonts.size())
     {
-        auto fileName = _arrayBitmapFonts.at(_bitmapFontLoadProgress).fileName;
-        auto fnt = cocos2d::FontAtlasCache::getFontAtlasFNT(fileName);
-        ResourceManager::getInstance().cacheRef(fileName, fnt);
+        auto& bitmapFontInfo = _arrayBitmapFonts.at(_bitmapFontLoadProgress);
+        auto fnt = cocos2d::FontAtlasCache::getFontAtlasFNT(bitmapFontInfo.fileName);
+        ResourceManager::getInstance().cacheFontAtlas(bitmapFontInfo.groupID, bitmapFontInfo.fileName, fnt);
         ++_bitmapFontLoadProgress;
         ++_curResourceCount;
         notifyProgress();
