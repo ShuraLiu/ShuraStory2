@@ -11,6 +11,8 @@
 		1A1D8AA11A2773D700804D47 /* ResourceConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D8A9F1A2773D700804D47 /* ResourceConfig.cpp */; };
 		1A1D8AA31A27787B00804D47 /* ResourceConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1A1D8AA21A27787B00804D47 /* ResourceConfig.xml */; };
 		1A6182931A2AABEA002BC80B /* ResourceLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6182911A2AABEA002BC80B /* ResourceLoader.cpp */; };
+		1A6AE13A1A30AB5D004FA301 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AE1381A30AB5D004FA301 /* SceneManager.cpp */; };
+		1A6AE1431A30B6FF004FA301 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AE1411A30B6FF004FA301 /* GameScene.cpp */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -111,6 +113,10 @@
 		1A1D8AA21A27787B00804D47 /* ResourceConfig.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ResourceConfig.xml; sourceTree = "<group>"; };
 		1A6182911A2AABEA002BC80B /* ResourceLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceLoader.cpp; sourceTree = "<group>"; };
 		1A6182921A2AABEA002BC80B /* ResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceLoader.h; sourceTree = "<group>"; };
+		1A6AE1381A30AB5D004FA301 /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
+		1A6AE1391A30AB5D004FA301 /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
+		1A6AE1411A30B6FF004FA301 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		1A6AE1421A30B6FF004FA301 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		1AB379371A2B32700011D57D /* CustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEvent.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
@@ -255,6 +261,48 @@
 			name = resouce_config;
 			sourceTree = "<group>";
 		};
+		1A6AE1371A30AB38004FA301 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				1A6AE13D1A30B691004FA301 /* view */,
+				1A6AE13C1A30B223004FA301 /* view_controller */,
+				1A6AE13B1A30B209004FA301 /* scene_manager */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		1A6AE13B1A30B209004FA301 /* scene_manager */ = {
+			isa = PBXGroup;
+			children = (
+				1A6AE1381A30AB5D004FA301 /* SceneManager.cpp */,
+				1A6AE1391A30AB5D004FA301 /* SceneManager.h */,
+			);
+			name = scene_manager;
+			sourceTree = "<group>";
+		};
+		1A6AE13C1A30B223004FA301 /* view_controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view_controller;
+			sourceTree = "<group>";
+		};
+		1A6AE13D1A30B691004FA301 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1A6AE1411A30B6FF004FA301 /* GameScene.cpp */,
+				1A6AE1421A30B6FF004FA301 /* GameScene.h */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		1A6AE1441A30B7A5004FA301 /* game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = game;
+			sourceTree = "<group>";
+		};
 		1AC6FAE6180E9839004C840B /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +365,8 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1A6AE1441A30B7A5004FA301 /* game */,
+				1A6AE1371A30AB38004FA301 /* ui */,
 				1A6182901A2AAB8B002BC80B /* resouce_config */,
 				1A1D8A9A1A276FF800804D47 /* global */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
@@ -522,11 +572,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A6AE1431A30B6FF004FA301 /* GameScene.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				1A6182931A2AABEA002BC80B /* ResourceLoader.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				1A6AE13A1A30AB5D004FA301 /* SceneManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1A1D8AA11A2773D700804D47 /* ResourceConfig.cpp in Sources */,
 				1A1D8A9D1A2770CF00804D47 /* ResourceManager.cpp in Sources */,
