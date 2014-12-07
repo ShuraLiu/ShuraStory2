@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A11777D1A344A1100483136 /* ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A11777B1A344A1100483136 /* ViewController.cpp */; };
+		1A1177801A345B5E00483136 /* LifeCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A11777E1A345B5E00483136 /* LifeCircle.cpp */; };
 		1A1D8A9D1A2770CF00804D47 /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D8A9B1A2770CF00804D47 /* ResourceManager.cpp */; };
 		1A1D8AA11A2773D700804D47 /* ResourceConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D8A9F1A2773D700804D47 /* ResourceConfig.cpp */; };
 		1A1D8AA31A27787B00804D47 /* ResourceConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1A1D8AA21A27787B00804D47 /* ResourceConfig.xml */; };
@@ -109,6 +110,8 @@
 /* Begin PBXFileReference section */
 		1A11777B1A344A1100483136 /* ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ViewController.cpp; sourceTree = "<group>"; };
 		1A11777C1A344A1100483136 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1A11777E1A345B5E00483136 /* LifeCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LifeCircle.cpp; sourceTree = "<group>"; };
+		1A11777F1A345B5E00483136 /* LifeCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifeCircle.h; sourceTree = "<group>"; };
 		1A1D8A9B1A2770CF00804D47 /* ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceManager.cpp; sourceTree = "<group>"; };
 		1A1D8A9C1A2770CF00804D47 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
 		1A1D8A9F1A2773D700804D47 /* ResourceConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceConfig.cpp; sourceTree = "<group>"; };
@@ -247,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				1AB379371A2B32700011D57D /* CustomEvent.h */,
+				1A11777E1A345B5E00483136 /* LifeCircle.cpp */,
+				1A11777F1A345B5E00483136 /* LifeCircle.h */,
 			);
 			name = global;
 			sourceTree = "<group>";
@@ -578,6 +583,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A6AE1431A30B6FF004FA301 /* GameScene.cpp in Sources */,
+				1A1177801A345B5E00483136 /* LifeCircle.cpp in Sources */,
 				1A11777D1A344A1100483136 /* ViewController.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,

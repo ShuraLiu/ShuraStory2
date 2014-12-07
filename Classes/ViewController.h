@@ -9,11 +9,10 @@
 #ifndef __ShuraStory__ViewController__
 #define __ShuraStory__ViewController__
 
-#include <stdio.h>
-#include <memory>
 #include "cocos2d.h"
+#include "LifeCircle.h"
 
-class ViewController
+class ViewController : public LifeCircle
 {
 public:
     typedef std::shared_ptr<ViewController> Ptr;
