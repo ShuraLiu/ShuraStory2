@@ -1,6 +1,8 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
 #include "ResourceConfig.h"
+#include "SceneManager.h"
+#include "TestViewController.h"
 
 USING_NS_CC;
 
@@ -41,11 +43,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
 
+    TestViewController::Ptr pController(new TestViewController());
+    SceneManager::getInstance().pushViewController(pController);
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+//    auto scene = HelloWorld::createScene();
 
     // run
-    director->runWithScene(scene);
+//    director->runWithScene(scene);
 
     return true;
 }
