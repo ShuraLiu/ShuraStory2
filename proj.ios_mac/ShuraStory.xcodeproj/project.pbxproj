@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A11777D1A344A1100483136 /* ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A11777B1A344A1100483136 /* ViewController.cpp */; };
 		1A1D8A9D1A2770CF00804D47 /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D8A9B1A2770CF00804D47 /* ResourceManager.cpp */; };
 		1A1D8AA11A2773D700804D47 /* ResourceConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D8A9F1A2773D700804D47 /* ResourceConfig.cpp */; };
 		1A1D8AA31A27787B00804D47 /* ResourceConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1A1D8AA21A27787B00804D47 /* ResourceConfig.xml */; };
@@ -106,6 +107,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A11777B1A344A1100483136 /* ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ViewController.cpp; sourceTree = "<group>"; };
+		1A11777C1A344A1100483136 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1A1D8A9B1A2770CF00804D47 /* ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceManager.cpp; sourceTree = "<group>"; };
 		1A1D8A9C1A2770CF00804D47 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
 		1A1D8A9F1A2773D700804D47 /* ResourceConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceConfig.cpp; sourceTree = "<group>"; };
@@ -283,6 +286,8 @@
 		1A6AE13C1A30B223004FA301 /* view_controller */ = {
 			isa = PBXGroup;
 			children = (
+				1A11777B1A344A1100483136 /* ViewController.cpp */,
+				1A11777C1A344A1100483136 /* ViewController.h */,
 			);
 			name = view_controller;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A6AE1431A30B6FF004FA301 /* GameScene.cpp in Sources */,
+				1A11777D1A344A1100483136 /* ViewController.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				1A6182931A2AABEA002BC80B /* ResourceLoader.cpp in Sources */,

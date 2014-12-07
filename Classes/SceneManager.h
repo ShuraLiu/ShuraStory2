@@ -10,11 +10,13 @@
 #define __ShuraStory__SceneManager__
 
 #include <stdio.h>
-
-class ViewController;
+#include <vector>
+#include "ViewController.h"
 
 class SceneManager
 {
+    typedef std::vector<ViewController::Ptr> ControllerArray;
+    
 private:
     SceneManager();
     SceneManager(const SceneManager&) = delete;
@@ -29,9 +31,12 @@ public:
         return manager;
     }
     
-    void pushViewController(ViewController* controller, bool withAnimation = false);
+    void pushViewController(const ViewController::Ptr& controller, bool withAnimation = false);
     void popViewController(bool withAnimation = false);
-    void replaceViewController(ViewController* controller, bool withAnimation = false);
+    void replaceViewController(const ViewController::Ptr& controller, bool withAnimation = false);
+    
+private:
+    ControllerArray _controllerStack;
 };
 
 #endif /* defined(__ShuraStory__SceneManager__) */
