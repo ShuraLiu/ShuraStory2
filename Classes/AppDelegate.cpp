@@ -2,6 +2,7 @@
 #include "HelloWorldScene.h"
 #include "ResourceConfig.h"
 #include "SceneManager.h"
+#include "DesignResolution.h"
 #include "TestViewController.h"
 
 USING_NS_CC;
@@ -36,6 +37,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     
     ResourceConfig::getInstance().loadConfig("ResourceConfig.xml");
     ResourceConfig::getInstance().dump();
+    DesignResolution::getInstance().initResolution();
 
     // turn on display FPS
     director->setDisplayStats(true);
@@ -45,11 +47,6 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     TestViewController::Ptr pController(new TestViewController());
     SceneManager::getInstance().pushViewController(pController);
-    // create a scene. it's an autorelease object
-//    auto scene = HelloWorld::createScene();
-
-    // run
-//    director->runWithScene(scene);
 
     return true;
 }
