@@ -1,9 +1,8 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
 #include "ResourceConfig.h"
 #include "SceneManager.h"
 #include "DesignResolution.h"
-#include "TestViewController.h"
+#include "HomeSceneController.h"
 
 USING_NS_CC;
 
@@ -35,6 +34,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
     
+    FileUtils::getInstance()->addSearchPath("ccs");
+    
     ResourceConfig::getInstance().loadConfig("ResourceConfig.xml");
     ResourceConfig::getInstance().dump();
     DesignResolution::getInstance().initResolution();
@@ -45,7 +46,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
 
-    TestViewController::Ptr pController(new TestViewController());
+    HomeSceneController::Ptr pController(new HomeSceneController());
     SceneManager::getInstance().pushViewController(pController);
 
     return true;

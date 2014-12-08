@@ -20,7 +20,7 @@ DesignResolution::DesignResolution()
 void DesignResolution::initResolution()
 {
     auto pGLView = cocos2d::Director::getInstance()->getOpenGLView();
-    pGLView->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::FIXED_WIDTH);
+    pGLView->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::FIXED_HEIGHT);
     _scale = pGLView->getScaleX();
 }
 
