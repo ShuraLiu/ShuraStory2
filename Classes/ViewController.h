@@ -11,12 +11,13 @@
 
 #include "cocos2d.h"
 #include "LifeCircle.h"
+#include "ViewControllerType.h"
 
 class ViewController : public LifeCircle
 {
 public:
+    constexpr static const ViewControllerType TYPE = ViewControllerType::BaseViewController;
     typedef std::shared_ptr<ViewController> Ptr;
-    
     
     ViewController() = default;
     virtual ~ViewController() = default;

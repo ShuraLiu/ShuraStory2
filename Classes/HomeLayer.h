@@ -11,6 +11,13 @@
 
 #include "BaseView.h"
 
+class HomeLayerUIEventDelegate
+{
+public:
+    virtual ~HomeLayerUIEventDelegate() = default;
+    virtual void onButtonTestPressed() = 0;
+};
+
 class HomeLayer : public BaseView
 {
 public:
@@ -22,10 +29,14 @@ public:
     void onEnter() override;
     void onExit() override;
     
-    virtual void addSubView(const ViewController::Ptr& controller);
+    virtual void addSubView(const ViewController::Ptr& controller, ViewControllerType type);
+    void setHomeLayerUIEventDelegate(HomeLayerUIEventDelegate* pDelegate);
     
 private:
     cocos2d::Node* _pNodeCCS;
+    HomeLayerUIEventDelegate* _pHomeLayerUIEventDelegate;
+    
+    cocos2d::ui::Button* _pButtonTest;
 };
 
 #endif /* defined(__ShuraStory__HomeLayer__) */

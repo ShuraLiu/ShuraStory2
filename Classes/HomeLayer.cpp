@@ -15,6 +15,8 @@ using namespace cocostudio;
 
 HomeLayer::HomeLayer()
 : _pNodeCCS(nullptr)
+, _pHomeLayerUIEventDelegate(nullptr)
+, _pButtonTest(nullptr)
 {
     
 }
@@ -38,6 +40,24 @@ bool HomeLayer::init()
     _pNodeCCS->setContentSize(winSize);
     addChild(_pNodeCCS);
     
+    _pButtonTest = (Button*) Helper::seekNodeByName(_pNodeCCS, "ButtonTest");
+    
+    _pButtonTest->addTouchEventListener([this](Ref* ref,Widget::TouchEventType type){
+        switch (type) {
+            case cocos2d::ui::Widget::TouchEventType::ENDED:
+            {
+                if (_pHomeLayerUIEventDelegate)
+                {
+                    _pHomeLayerUIEventDelegate->onButtonTestPressed();
+                }
+            }
+                break;
+                
+            default:
+                break;
+        }
+    });
+    
     return true;
 }
 
@@ -51,7 +71,25 @@ void HomeLayer::onExit()
     BaseView::onExit();
 }
 
-void HomeLayer::addSubView(const ViewController::Ptr &controller)
+void HomeLayer::addSubView(const ViewController::Ptr &controller, ViewControllerType type)
 {
-    
+    switch (type)
+    {
+        case ViewControllerType::SubViewController:
+        {
+            auto pNode = controller->createView();
+            pNode->setPosition(Vec2(200, 200));
+            pNode->setAnchorPoint(Vec2::ZERO);
+            this->addChild(pNode, 1);
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+void HomeLayer::setHomeLayerUIEventDelegate(HomeLayerUIEventDelegate *pDelegate)
+{
+    _pHomeLayerUIEventDelegate = pDelegate;
 }

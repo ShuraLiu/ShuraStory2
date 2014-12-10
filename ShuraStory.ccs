@@ -4,6 +4,7 @@
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
         <Project Name="HomeScene.csd" />
+        <Project Name="SubLayer.csd" />
       </RootFolder>
     </Group>
   </SolutionFolder>

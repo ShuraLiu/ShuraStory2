@@ -18,6 +18,8 @@
 		1A6A106E1A388DAD00ADDE5C /* BaseView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A106C1A388DAD00ADDE5C /* BaseView.cpp */; };
 		1A6A10711A388EEE00ADDE5C /* HomeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A106F1A388EEE00ADDE5C /* HomeLayer.cpp */; };
 		1A6A10741A388F5F00ADDE5C /* HomeLayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10721A388F5F00ADDE5C /* HomeLayerController.cpp */; };
+		1A6A10771A3895D100ADDE5C /* SubLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10751A3895D000ADDE5C /* SubLayer.cpp */; };
+		1A6A107A1A38962D00ADDE5C /* SubLayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10781A38962D00ADDE5C /* SubLayerController.cpp */; };
 		1A6AE13A1A30AB5D004FA301 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AE1381A30AB5D004FA301 /* SceneManager.cpp */; };
 		1A6AE1431A30B6FF004FA301 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AE1411A30B6FF004FA301 /* GameScene.cpp */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
@@ -133,6 +135,11 @@
 		1A6A10701A388EEE00ADDE5C /* HomeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLayer.h; sourceTree = "<group>"; };
 		1A6A10721A388F5F00ADDE5C /* HomeLayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HomeLayerController.cpp; sourceTree = "<group>"; };
 		1A6A10731A388F5F00ADDE5C /* HomeLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLayerController.h; sourceTree = "<group>"; };
+		1A6A10751A3895D000ADDE5C /* SubLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SubLayer.cpp; sourceTree = "<group>"; };
+		1A6A10761A3895D100ADDE5C /* SubLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubLayer.h; sourceTree = "<group>"; };
+		1A6A10781A38962D00ADDE5C /* SubLayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SubLayerController.cpp; sourceTree = "<group>"; };
+		1A6A10791A38962D00ADDE5C /* SubLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubLayerController.h; sourceTree = "<group>"; };
+		1A6A107B1A38A93900ADDE5C /* ViewControllerType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerType.h; sourceTree = "<group>"; };
 		1A6AE1381A30AB5D004FA301 /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
 		1A6AE1391A30AB5D004FA301 /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
 		1A6AE1411A30B6FF004FA301 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
@@ -313,6 +320,9 @@
 				1A1177821A34626100483136 /* TestViewController.h */,
 				1A6A10721A388F5F00ADDE5C /* HomeLayerController.cpp */,
 				1A6A10731A388F5F00ADDE5C /* HomeLayerController.h */,
+				1A6A10781A38962D00ADDE5C /* SubLayerController.cpp */,
+				1A6A10791A38962D00ADDE5C /* SubLayerController.h */,
+				1A6A107B1A38A93900ADDE5C /* ViewControllerType.h */,
 			);
 			name = view_controller;
 			sourceTree = "<group>";
@@ -326,6 +336,8 @@
 				1A6A106D1A388DAD00ADDE5C /* BaseView.h */,
 				1A6A106F1A388EEE00ADDE5C /* HomeLayer.cpp */,
 				1A6A10701A388EEE00ADDE5C /* HomeLayer.h */,
+				1A6A10751A3895D000ADDE5C /* SubLayer.cpp */,
+				1A6A10761A3895D100ADDE5C /* SubLayer.h */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -611,10 +623,12 @@
 				1A11777D1A344A1100483136 /* ViewController.cpp in Sources */,
 				1A6A10741A388F5F00ADDE5C /* HomeLayerController.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				1A6A10771A3895D100ADDE5C /* SubLayer.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				1A6182931A2AABEA002BC80B /* ResourceLoader.cpp in Sources */,
 				1A1177831A34626100483136 /* TestViewController.cpp in Sources */,
 				1A1177871A34A29E00483136 /* DesignResolution.cpp in Sources */,
+				1A6A107A1A38962D00ADDE5C /* SubLayerController.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1A6AE13A1A30AB5D004FA301 /* SceneManager.cpp in Sources */,
