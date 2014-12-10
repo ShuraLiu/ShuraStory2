@@ -7,3 +7,9 @@
 //
 
 #include "ViewController.h"
+
+void ViewController::addChildViewController(const ViewController::Ptr &controller)
+{
+    _children.push_back(controller);
+    
+}

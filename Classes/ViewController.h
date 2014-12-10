@@ -22,6 +22,13 @@ public:
     virtual ~ViewController() = default;
     
     virtual cocos2d::Node* createView() = 0;
+    
+    void addChildViewController(const ViewController::Ptr& controller);
+    void removeChildViewController(const ViewController::Ptr& controller);
+    void removeFromParentViewController();
+    
+    ViewController::Ptr _pParent;
+    std::vector<ViewController::Ptr> _children;
 };
 
 #endif /* defined(__ShuraStory__ViewController__) */

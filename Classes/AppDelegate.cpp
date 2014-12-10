@@ -2,7 +2,7 @@
 #include "ResourceConfig.h"
 #include "SceneManager.h"
 #include "DesignResolution.h"
-#include "HomeSceneController.h"
+#include "HomeLayerController.h"
 
 USING_NS_CC;
 
@@ -46,7 +46,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
 
-    HomeSceneController::Ptr pController(new HomeSceneController());
+    HomeLayerController::Ptr pController(new HomeLayerController());
     SceneManager::getInstance().pushViewController(pController);
 
     return true;

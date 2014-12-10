@@ -27,8 +27,8 @@ SceneManager::~SceneManager()
 
 void SceneManager::pushViewController(const ViewController::Ptr& controller, bool withAnimation/* = false*/)
 {
-    cocos2d::Scene* pScene = dynamic_cast<cocos2d::Scene*>(controller->createView());
-    assert(pScene);
+    cocos2d::Scene* pScene = cocos2d::Scene::create();
+    pScene->addChild(controller->createView());
     auto pDirector = cocos2d::Director::getInstance();
     if(!pDirector->getRunningScene())
     {
@@ -59,8 +59,8 @@ void SceneManager::popViewController(bool withAnimation/* = false*/)
 
 void SceneManager::replaceViewController(const ViewController::Ptr &controller, bool withAnimation/* = false*/)
 {
-    cocos2d::Scene* pScene = dynamic_cast<cocos2d::Scene*>(controller->createView());
-    assert(pScene);
+    cocos2d::Scene* pScene = cocos2d::Scene::create();
+    pScene->addChild(controller->createView());
     auto pLast = _controllerStack.at(_controllerStack.size() - 1);
     pLast->stop();
     _controllerStack.pop_back();
