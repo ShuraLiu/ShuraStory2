@@ -82,6 +82,9 @@ public:
     static void doLayout(Node *rootNode);
 
     static void changeLayoutSystemActiveState(bool bActive);
+    
+    static Node* seekNodeByTag(Node* root, int tag);
+    static Node* seekNodeByName(Node* root, const std::string& name);
 };
 }
 
