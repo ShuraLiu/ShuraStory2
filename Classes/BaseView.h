@@ -18,6 +18,7 @@ class BaseViewProtocol
 public:
     virtual ~BaseViewProtocol() = default;
     virtual void addSubView(const ViewController::Ptr& controller, ViewControllerType type) = 0;
+    virtual void removeSubView(const ViewController::Ptr& controller, ViewControllerType type) = 0;
 };
 
 class BaseView
@@ -28,6 +29,7 @@ public:
     BaseView();
     virtual ~BaseView() = default;
     virtual void addSubView(const ViewController::Ptr& controller, ViewControllerType type){};
+    virtual void removeSubView(const ViewController::Ptr& controller, ViewControllerType type){};
 };
 
 #endif /* defined(__ShuraStory__BaseView__) */

@@ -11,6 +11,7 @@
 
 #include "ViewController.h"
 #include "HomeLayer.h"
+#include "SubLayerController.h"
 
 class HomeLayerController
 : public ViewController
@@ -21,13 +22,14 @@ public:
     HomeLayerController();
     typedef std::shared_ptr<HomeLayerController> Ptr;
     
-    virtual cocos2d::Node* createView() override;
+    virtual cocos2d::Node* getView() override;
     virtual void onStart() override;
     
     virtual void onButtonTestPressed() override;
+    virtual void onButtonTest2Pressed() override;
     
 private:
-    HomeLayer* _pLayer;
+    SubLayerController::Ptr _pSubLayerController;
 };
 
 #endif /* defined(__ShuraStory__HomeLayerController__) */

@@ -7,18 +7,22 @@
 //
 
 #include "HomeLayerController.h"
-#include "SubLayerController.h"
 
 HomeLayerController::HomeLayerController()
-: _pLayer(nullptr)
+: _pSubLayerController(nullptr)
 {
     
 }
-cocos2d::Node* HomeLayerController::createView()
+cocos2d::Node* HomeLayerController::getView()
 {
-    _pLayer = HomeLayer::create();
-    _pLayer->setHomeLayerUIEventDelegate(this);
-    return _pLayer;
+    if (!_pNode)
+    {
+        auto pLayer = HomeLayer::create();
+        pLayer->setHomeLayerUIEventDelegate(this);
+        _pNode = pLayer;
+        _pNode->retain();
+    }
+    return _pNode;
 }
 
 void HomeLayerController::onStart()
@@ -28,7 +32,14 @@ void HomeLayerController::onStart()
 
 void HomeLayerController::onButtonTestPressed()
 {
-    SubLayerController::Ptr pSubLayerController(new SubLayerController());
-    _children.push_back(pSubLayerController);
-    _pLayer->addSubView(pSubLayerController, pSubLayerController->TYPE);
+    if (!_pSubLayerController)
+    {
+        _pSubLayerController = std::make_shared<SubLayerController>();
+    }
+    _pNode->addSubView(_pSubLayerController, _pSubLayerController->TYPE);
+}
+
+void HomeLayerController::onButtonTest2Pressed()
+{
+    _pNode->removeSubView(_pSubLayerController, _pSubLayerController->TYPE);
 }

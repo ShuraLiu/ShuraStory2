@@ -13,23 +13,21 @@
 #include "LifeCircle.h"
 #include "ViewControllerType.h"
 
+class BaseView;
+
 class ViewController : public LifeCircle
 {
 public:
     constexpr static const ViewControllerType TYPE = ViewControllerType::BaseViewController;
     typedef std::shared_ptr<ViewController> Ptr;
     
-    ViewController() = default;
+    ViewController():_pNode(nullptr){}
     virtual ~ViewController() = default;
     
-    virtual cocos2d::Node* createView() = 0;
+    virtual cocos2d::Node* getView() = 0;
     
-    void addChildViewController(const ViewController::Ptr& controller);
-    void removeChildViewController(const ViewController::Ptr& controller);
-    void removeFromParentViewController();
-    
-    ViewController::Ptr _pParent;
-    std::vector<ViewController::Ptr> _children;
+protected:
+    BaseView* _pNode;
 };
 
 #endif /* defined(__ShuraStory__ViewController__) */

@@ -58,6 +58,23 @@ bool HomeLayer::init()
         }
     });
     
+    _pButtonTest2 = (Button*) Helper::seekNodeByName(_pNodeCCS, "ButtonTest2");
+    _pButtonTest2->addTouchEventListener([this](Ref* ref,Widget::TouchEventType type){
+        switch (type) {
+            case cocos2d::ui::Widget::TouchEventType::ENDED:
+            {
+                if (_pHomeLayerUIEventDelegate)
+                {
+                    _pHomeLayerUIEventDelegate->onButtonTest2Pressed();
+                }
+            }
+                break;
+                
+            default:
+                break;
+        }
+    });
+    
     return true;
 }
 
@@ -77,10 +94,24 @@ void HomeLayer::addSubView(const ViewController::Ptr &controller, ViewController
     {
         case ViewControllerType::SubViewController:
         {
-            auto pNode = controller->createView();
+            auto pNode = controller->getView();
             pNode->setPosition(Vec2(200, 200));
             pNode->setAnchorPoint(Vec2::ZERO);
             this->addChild(pNode, 1);
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+void HomeLayer::removeSubView(const ViewController::Ptr &controller, ViewControllerType type)
+{
+    switch (type) {
+        case ViewControllerType::SubViewController:
+        {
+            this->removeChild(controller->getView());
         }
             break;
             

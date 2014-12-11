@@ -16,6 +16,7 @@ class HomeLayerUIEventDelegate
 public:
     virtual ~HomeLayerUIEventDelegate() = default;
     virtual void onButtonTestPressed() = 0;
+    virtual void onButtonTest2Pressed() = 0;
 };
 
 class HomeLayer : public BaseView
@@ -30,6 +31,7 @@ public:
     void onExit() override;
     
     virtual void addSubView(const ViewController::Ptr& controller, ViewControllerType type);
+    virtual void removeSubView(const ViewController::Ptr& controller, ViewControllerType type);
     void setHomeLayerUIEventDelegate(HomeLayerUIEventDelegate* pDelegate);
     
 private:
@@ -37,6 +39,7 @@ private:
     HomeLayerUIEventDelegate* _pHomeLayerUIEventDelegate;
     
     cocos2d::ui::Button* _pButtonTest;
+    cocos2d::ui::Button* _pButtonTest2;
 };
 
 #endif /* defined(__ShuraStory__HomeLayer__) */

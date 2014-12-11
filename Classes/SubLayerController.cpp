@@ -9,7 +9,12 @@
 #include "SubLayerController.h"
 #include "SubLayer.h"
 
-cocos2d::Node* SubLayerController::createView()
+cocos2d::Node* SubLayerController::getView()
 {
-    return SubLayer::create();
+    if (!_pNode)
+    {
+        _pNode = SubLayer::create();
+        _pNode->retain();
+    }
+    return _pNode;
 }
