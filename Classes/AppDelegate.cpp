@@ -37,7 +37,6 @@ bool AppDelegate::applicationDidFinishLaunching() {
     FileUtils::getInstance()->addSearchPath("ccs");
     
     ResourceConfig::getInstance().loadConfig("ResourceConfig.xml");
-    ResourceConfig::getInstance().dump();
     DesignResolution::getInstance().initResolution();
 
     // turn on display FPS
