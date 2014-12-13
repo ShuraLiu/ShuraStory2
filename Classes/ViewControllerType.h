@@ -11,7 +11,6 @@
 
 enum class ViewControllerType : int
 {
-    BaseViewController,
     HomeViewController,
     SubViewController,
 };

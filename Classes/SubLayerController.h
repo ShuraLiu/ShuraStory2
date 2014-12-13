@@ -17,6 +17,7 @@ public:
     constexpr static const ViewControllerType TYPE = ViewControllerType::SubViewController;
     typedef std::shared_ptr<SubLayerController> Ptr;
     
+    virtual const ViewControllerType getType() const override {return ViewControllerType::SubViewController;};
     virtual cocos2d::Node* getView() override;
 };
 

@@ -30,8 +30,8 @@ public:
     void onEnter() override;
     void onExit() override;
     
-    virtual void addSubView(const ViewController::Ptr& controller, ViewControllerType type);
-    virtual void removeSubView(const ViewController::Ptr& controller, ViewControllerType type);
+    virtual void addSubView(const ViewController::Ptr& controller);
+    virtual void removeSubView(const ViewController::Ptr& controller);
     void setHomeLayerUIEventDelegate(HomeLayerUIEventDelegate* pDelegate);
     
 private:

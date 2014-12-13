@@ -18,12 +18,12 @@ class BaseView;
 class ViewController : public LifeCircle
 {
 public:
-    constexpr static const ViewControllerType TYPE = ViewControllerType::BaseViewController;
     typedef std::shared_ptr<ViewController> Ptr;
     
     ViewController():_pNode(nullptr){}
     virtual ~ViewController() = default;
     
+    virtual const ViewControllerType getType() const = 0;
     virtual cocos2d::Node* getView() = 0;
     
 protected:

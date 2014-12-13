@@ -88,9 +88,9 @@ void HomeLayer::onExit()
     BaseView::onExit();
 }
 
-void HomeLayer::addSubView(const ViewController::Ptr &controller, ViewControllerType type)
+void HomeLayer::addSubView(const ViewController::Ptr &controller)
 {
-    switch (type)
+    switch (controller->getType())
     {
         case ViewControllerType::SubViewController:
         {
@@ -106,9 +106,9 @@ void HomeLayer::addSubView(const ViewController::Ptr &controller, ViewController
     }
 }
 
-void HomeLayer::removeSubView(const ViewController::Ptr &controller, ViewControllerType type)
+void HomeLayer::removeSubView(const ViewController::Ptr &controller)
 {
-    switch (type) {
+    switch (controller->getType()) {
         case ViewControllerType::SubViewController:
         {
             this->removeChild(controller->getView());

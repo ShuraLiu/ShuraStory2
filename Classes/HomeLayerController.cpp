@@ -36,10 +36,10 @@ void HomeLayerController::onButtonTestPressed()
     {
         _pSubLayerController = std::make_shared<SubLayerController>();
     }
-    _pNode->addSubView(_pSubLayerController, _pSubLayerController->TYPE);
+    _pNode->addSubView(_pSubLayerController);
 }
 
 void HomeLayerController::onButtonTest2Pressed()
 {
-    _pNode->removeSubView(_pSubLayerController, _pSubLayerController->TYPE);
+    _pNode->removeSubView(_pSubLayerController);
 }

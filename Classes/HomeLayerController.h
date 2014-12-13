@@ -22,7 +22,9 @@ public:
     HomeLayerController();
     typedef std::shared_ptr<HomeLayerController> Ptr;
     
+    virtual const ViewControllerType getType() const override {return ViewControllerType::HomeViewController;};
     virtual cocos2d::Node* getView() override;
+    
     virtual void onStart() override;
     
     virtual void onButtonTestPressed() override;
