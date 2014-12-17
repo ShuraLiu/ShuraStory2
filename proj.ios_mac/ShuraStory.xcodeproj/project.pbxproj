@@ -15,14 +15,12 @@
 		1A1D8AA31A27787B00804D47 /* ResourceConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1A1D8AA21A27787B00804D47 /* ResourceConfig.xml */; };
 		1A6182931A2AABEA002BC80B /* ResourceLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6182911A2AABEA002BC80B /* ResourceLoader.cpp */; };
 		1A6A106E1A388DAD00ADDE5C /* BaseView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A106C1A388DAD00ADDE5C /* BaseView.cpp */; };
-		1A6A10711A388EEE00ADDE5C /* HomeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A106F1A388EEE00ADDE5C /* HomeLayer.cpp */; };
-		1A6A10741A388F5F00ADDE5C /* HomeLayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10721A388F5F00ADDE5C /* HomeLayerController.cpp */; };
-		1A6A10771A3895D100ADDE5C /* SubLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10751A3895D000ADDE5C /* SubLayer.cpp */; };
-		1A6A107A1A38962D00ADDE5C /* SubLayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A10781A38962D00ADDE5C /* SubLayerController.cpp */; };
 		1A6AE13A1A30AB5D004FA301 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AE1381A30AB5D004FA301 /* SceneManager.cpp */; };
 		1A6AE1431A30B6FF004FA301 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AE1411A30B6FF004FA301 /* GameScene.cpp */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
+		1AFA3B5D1A41CE55002B039E /* LoadingLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA3B5B1A41CE55002B039E /* LoadingLayer.cpp */; };
+		1AFA3B631A41D494002B039E /* LoadingLayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA3B611A41D494002B039E /* LoadingLayerController.cpp */; };
 		1AFD90241A35EDD600EA0440 /* ccs in Resources */ = {isa = PBXBuildFile; fileRef = 1AFD90231A35EDD600EA0440 /* ccs */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -126,14 +124,6 @@
 		1A6182921A2AABEA002BC80B /* ResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceLoader.h; sourceTree = "<group>"; };
 		1A6A106C1A388DAD00ADDE5C /* BaseView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseView.cpp; sourceTree = "<group>"; };
 		1A6A106D1A388DAD00ADDE5C /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
-		1A6A106F1A388EEE00ADDE5C /* HomeLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HomeLayer.cpp; sourceTree = "<group>"; };
-		1A6A10701A388EEE00ADDE5C /* HomeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLayer.h; sourceTree = "<group>"; };
-		1A6A10721A388F5F00ADDE5C /* HomeLayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HomeLayerController.cpp; sourceTree = "<group>"; };
-		1A6A10731A388F5F00ADDE5C /* HomeLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeLayerController.h; sourceTree = "<group>"; };
-		1A6A10751A3895D000ADDE5C /* SubLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SubLayer.cpp; sourceTree = "<group>"; };
-		1A6A10761A3895D100ADDE5C /* SubLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubLayer.h; sourceTree = "<group>"; };
-		1A6A10781A38962D00ADDE5C /* SubLayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SubLayerController.cpp; sourceTree = "<group>"; };
-		1A6A10791A38962D00ADDE5C /* SubLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubLayerController.h; sourceTree = "<group>"; };
 		1A6A107B1A38A93900ADDE5C /* ViewControllerType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerType.h; sourceTree = "<group>"; };
 		1A6AE1381A30AB5D004FA301 /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
 		1A6AE1391A30AB5D004FA301 /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
@@ -142,6 +132,10 @@
 		1AB379371A2B32700011D57D /* CustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEvent.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
+		1AFA3B5B1A41CE55002B039E /* LoadingLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoadingLayer.cpp; sourceTree = "<group>"; };
+		1AFA3B5C1A41CE55002B039E /* LoadingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingLayer.h; sourceTree = "<group>"; };
+		1AFA3B611A41D494002B039E /* LoadingLayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoadingLayerController.cpp; sourceTree = "<group>"; };
+		1AFA3B621A41D494002B039E /* LoadingLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingLayerController.h; sourceTree = "<group>"; };
 		1AFD90231A35EDD600EA0440 /* ccs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ccs; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* ShuraStory iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShuraStory iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,11 +303,9 @@
 			children = (
 				1A11777B1A344A1100483136 /* ViewController.cpp */,
 				1A11777C1A344A1100483136 /* ViewController.h */,
-				1A6A10721A388F5F00ADDE5C /* HomeLayerController.cpp */,
-				1A6A10731A388F5F00ADDE5C /* HomeLayerController.h */,
-				1A6A10781A38962D00ADDE5C /* SubLayerController.cpp */,
-				1A6A10791A38962D00ADDE5C /* SubLayerController.h */,
 				1A6A107B1A38A93900ADDE5C /* ViewControllerType.h */,
+				1AFA3B611A41D494002B039E /* LoadingLayerController.cpp */,
+				1AFA3B621A41D494002B039E /* LoadingLayerController.h */,
 			);
 			name = view_controller;
 			sourceTree = "<group>";
@@ -325,10 +317,8 @@
 				1A6AE1421A30B6FF004FA301 /* GameScene.h */,
 				1A6A106C1A388DAD00ADDE5C /* BaseView.cpp */,
 				1A6A106D1A388DAD00ADDE5C /* BaseView.h */,
-				1A6A106F1A388EEE00ADDE5C /* HomeLayer.cpp */,
-				1A6A10701A388EEE00ADDE5C /* HomeLayer.h */,
-				1A6A10751A3895D000ADDE5C /* SubLayer.cpp */,
-				1A6A10761A3895D100ADDE5C /* SubLayer.h */,
+				1AFA3B5B1A41CE55002B039E /* LoadingLayer.cpp */,
+				1AFA3B5C1A41CE55002B039E /* LoadingLayer.h */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -610,16 +600,14 @@
 				1A6A106E1A388DAD00ADDE5C /* BaseView.cpp in Sources */,
 				1A1177801A345B5E00483136 /* LifeCircle.cpp in Sources */,
 				1A11777D1A344A1100483136 /* ViewController.cpp in Sources */,
-				1A6A10741A388F5F00ADDE5C /* HomeLayerController.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
-				1A6A10771A3895D100ADDE5C /* SubLayer.cpp in Sources */,
 				1A6182931A2AABEA002BC80B /* ResourceLoader.cpp in Sources */,
 				1A1177871A34A29E00483136 /* DesignResolution.cpp in Sources */,
-				1A6A107A1A38962D00ADDE5C /* SubLayerController.cpp in Sources */,
+				1AFA3B631A41D494002B039E /* LoadingLayerController.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1A6AE13A1A30AB5D004FA301 /* SceneManager.cpp in Sources */,
-				1A6A10711A388EEE00ADDE5C /* HomeLayer.cpp in Sources */,
+				1AFA3B5D1A41CE55002B039E /* LoadingLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1A1D8AA11A2773D700804D47 /* ResourceConfig.cpp in Sources */,
 				1A1D8A9D1A2770CF00804D47 /* ResourceManager.cpp in Sources */,

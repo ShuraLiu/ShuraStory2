@@ -2,7 +2,8 @@
 #include "ResourceConfig.h"
 #include "SceneManager.h"
 #include "DesignResolution.h"
-#include "HomeLayerController.h"
+#include "cocostudio/CocoStudio.h"
+#include "LoadingLayerController.h"
 
 USING_NS_CC;
 
@@ -44,8 +45,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
-
-    HomeLayerController::Ptr pController(new HomeLayerController());
+    
+    LoadingLayerController::Ptr pController(new LoadingLayerController());
     SceneManager::getInstance().pushViewController(pController);
 
     return true;
