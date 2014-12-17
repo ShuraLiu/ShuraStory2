@@ -36,6 +36,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
     
     FileUtils::getInstance()->addSearchPath("ccs");
+    FileUtils::getInstance()->addSearchPath("textures");
     
     ResourceConfig::getInstance().loadConfig("ResourceConfig.xml");
     DesignResolution::getInstance().initResolution();

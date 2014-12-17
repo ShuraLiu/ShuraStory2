@@ -21,6 +21,7 @@
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1AFA3B5D1A41CE55002B039E /* LoadingLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA3B5B1A41CE55002B039E /* LoadingLayer.cpp */; };
 		1AFA3B631A41D494002B039E /* LoadingLayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA3B611A41D494002B039E /* LoadingLayerController.cpp */; };
+		1AFA3B661A41DB94002B039E /* textures in Resources */ = {isa = PBXBuildFile; fileRef = 1AFA3B651A41DB94002B039E /* textures */; };
 		1AFD90241A35EDD600EA0440 /* ccs in Resources */ = {isa = PBXBuildFile; fileRef = 1AFD90231A35EDD600EA0440 /* ccs */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -136,6 +137,7 @@
 		1AFA3B5C1A41CE55002B039E /* LoadingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingLayer.h; sourceTree = "<group>"; };
 		1AFA3B611A41D494002B039E /* LoadingLayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoadingLayerController.cpp; sourceTree = "<group>"; };
 		1AFA3B621A41D494002B039E /* LoadingLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingLayerController.h; sourceTree = "<group>"; };
+		1AFA3B651A41DB94002B039E /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = textures; sourceTree = "<group>"; };
 		1AFD90231A35EDD600EA0440 /* ccs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ccs; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* ShuraStory iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShuraStory iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -378,6 +380,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1AFA3B651A41DB94002B039E /* textures */,
 				1AFD90231A35EDD600EA0440 /* ccs */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
@@ -571,6 +574,7 @@
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
+				1AFA3B661A41DB94002B039E /* textures in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,

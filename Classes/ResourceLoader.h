@@ -44,6 +44,7 @@ public:
     
 public:
     explicit ResourceLoader(const std::vector<std::string>& groups, const ResourceLoadProgressCallback& callback, const ResourceLoadStateCallback& startCallback, const ResourceLoadStateCallback endCallback);
+    ~ResourceLoader();
     
 public:
     void startLoad();

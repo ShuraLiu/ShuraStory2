@@ -1,20 +1,6 @@
-<Group id="TestGroup">
-    <Texture file_name="ui_1.pvr.ccz" pixel_format="RGBA8888"/>
-    <Texture file_name="ui_2.pvr.ccz" pixel_format="RGBA4444"/>
-    <SpriteFrame file_name="ui_1.plist" />
-    <BitmapFont file_name="font_1.fnt"/>
-    <!--
-     <BackgroundMusic file_name="background_music.mp3"/>
-     <SoundEffect file_name="sound_effect.mp3"/>
-     <FrameAnimations file_name="frame_animations.plist" />
-     <Particle file_name="particle_.plist"/> -->
-</Group>
-
-<Group id="TestGroup2">
-    <Texture file_name="ui_1.pvr.ccz" pixel_format="RGBA8888"/>
-    <Texture file_name="ui_2.pvr.ccz" pixel_format="RGBA4444"/>
-    <SpriteFrame file_name="ui_1.plist" />
-    <BitmapFont file_name="font_1.fnt"/>
+<Group id="GroupTitle">
+    <Texture file_name="home_background.pvr.ccz" pixel_format="RGBA8888"/>
+    <SpriteFrame file_name="home_background.plist" />
     <!--
      <BackgroundMusic file_name="background_music.mp3"/>
      <SoundEffect file_name="sound_effect.mp3"/>

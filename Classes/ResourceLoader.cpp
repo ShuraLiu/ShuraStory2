@@ -34,7 +34,7 @@ ResourceLoader::ResourceLoader(const std::vector<std::string>& groups, const Res
         for (auto& kv : resource)
         {
             auto type = kv.first;
-            if (std::strcmp(type.c_str(), TYPE_TEXTURE))
+            if (0 == std::strcmp(type.c_str(), TYPE_TEXTURE))
             {
                 auto& textures = kv.second;
                 for (auto& texture : textures)
@@ -46,7 +46,7 @@ ResourceLoader::ResourceLoader(const std::vector<std::string>& groups, const Res
                     _arrayTextures.push_back(info);
                 }
             }
-            else if (std::strcmp(type.c_str(), TYPE_SPRITEFRAME))
+            else if (0 == std::strcmp(type.c_str(), TYPE_SPRITEFRAME))
             {
                 auto& spriteFrames = kv.second;
                 for (auto& spriteFrame : spriteFrames)
@@ -57,7 +57,7 @@ ResourceLoader::ResourceLoader(const std::vector<std::string>& groups, const Res
                     _arraySpriteFrames.push_back(info);
                 }
             }
-            else if (std::strcmp(type.c_str(), TYPE_BITMAP_FONT))
+            else if (0 == std::strcmp(type.c_str(), TYPE_BITMAP_FONT))
             {
                 auto& bitmapFonts = kv.second;
                 for (auto& bitmapFont : bitmapFonts)
@@ -71,6 +71,11 @@ ResourceLoader::ResourceLoader(const std::vector<std::string>& groups, const Res
         }
     }
     _totalResourceCount = _arrayTextures.size() + _arraySpriteFrames.size() + _arrayBitmapFonts.size();
+}
+
+ResourceLoader::~ResourceLoader()
+{
+    cocos2d::Director::getInstance()->getScheduler()->unschedule(LOAD_RESOURCE, this);
 }
 
 void ResourceLoader::startLoad()
@@ -140,6 +145,7 @@ void ResourceLoader::loadResourcePerFrame(float dt)
     }
     else
     {
+        cocos2d::Director::getInstance()->getScheduler()->unschedule(LOAD_RESOURCE, this);
         notifyEnd();
     }
 }
