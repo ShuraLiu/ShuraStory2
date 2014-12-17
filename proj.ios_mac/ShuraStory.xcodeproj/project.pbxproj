@@ -22,6 +22,8 @@
 		1AFA3B5D1A41CE55002B039E /* LoadingLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA3B5B1A41CE55002B039E /* LoadingLayer.cpp */; };
 		1AFA3B631A41D494002B039E /* LoadingLayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA3B611A41D494002B039E /* LoadingLayerController.cpp */; };
 		1AFA3B661A41DB94002B039E /* textures in Resources */ = {isa = PBXBuildFile; fileRef = 1AFA3B651A41DB94002B039E /* textures */; };
+		1AFA3B691A41DEB8002B039E /* TitleLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA3B671A41DEB8002B039E /* TitleLayer.cpp */; };
+		1AFA3B6C1A41E09E002B039E /* TitleLayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA3B6A1A41E09E002B039E /* TitleLayerController.cpp */; };
 		1AFD90241A35EDD600EA0440 /* ccs in Resources */ = {isa = PBXBuildFile; fileRef = 1AFD90231A35EDD600EA0440 /* ccs */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -138,6 +140,10 @@
 		1AFA3B611A41D494002B039E /* LoadingLayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoadingLayerController.cpp; sourceTree = "<group>"; };
 		1AFA3B621A41D494002B039E /* LoadingLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingLayerController.h; sourceTree = "<group>"; };
 		1AFA3B651A41DB94002B039E /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = textures; sourceTree = "<group>"; };
+		1AFA3B671A41DEB8002B039E /* TitleLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TitleLayer.cpp; sourceTree = "<group>"; };
+		1AFA3B681A41DEB8002B039E /* TitleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLayer.h; sourceTree = "<group>"; };
+		1AFA3B6A1A41E09E002B039E /* TitleLayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TitleLayerController.cpp; sourceTree = "<group>"; };
+		1AFA3B6B1A41E09E002B039E /* TitleLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLayerController.h; sourceTree = "<group>"; };
 		1AFD90231A35EDD600EA0440 /* ccs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ccs; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* ShuraStory iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShuraStory iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,6 +314,8 @@
 				1A6A107B1A38A93900ADDE5C /* ViewControllerType.h */,
 				1AFA3B611A41D494002B039E /* LoadingLayerController.cpp */,
 				1AFA3B621A41D494002B039E /* LoadingLayerController.h */,
+				1AFA3B6A1A41E09E002B039E /* TitleLayerController.cpp */,
+				1AFA3B6B1A41E09E002B039E /* TitleLayerController.h */,
 			);
 			name = view_controller;
 			sourceTree = "<group>";
@@ -321,6 +329,8 @@
 				1A6A106D1A388DAD00ADDE5C /* BaseView.h */,
 				1AFA3B5B1A41CE55002B039E /* LoadingLayer.cpp */,
 				1AFA3B5C1A41CE55002B039E /* LoadingLayer.h */,
+				1AFA3B671A41DEB8002B039E /* TitleLayer.cpp */,
+				1AFA3B681A41DEB8002B039E /* TitleLayer.h */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -614,6 +624,8 @@
 				1AFA3B5D1A41CE55002B039E /* LoadingLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1A1D8AA11A2773D700804D47 /* ResourceConfig.cpp in Sources */,
+				1AFA3B691A41DEB8002B039E /* TitleLayer.cpp in Sources */,
+				1AFA3B6C1A41E09E002B039E /* TitleLayerController.cpp in Sources */,
 				1A1D8A9D1A2770CF00804D47 /* ResourceManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

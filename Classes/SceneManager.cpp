@@ -9,6 +9,8 @@
 #include "SceneManager.h"
 #include "cocos2d.h"
 
+const char* KEY_PUSH_VIEW_CONTROLLER = "key_push_view_controller";
+
 SceneManager::SceneManager()
 {
     
@@ -17,6 +19,7 @@ SceneManager::SceneManager()
 SceneManager::~SceneManager()
 {
     auto pDirector = cocos2d::Director::getInstance();
+    pDirector->getScheduler()->unschedule(KEY_PUSH_VIEW_CONTROLLER, this);
     while (!_controllerStack.empty())
     {
         _controllerStack.at(_controllerStack.size() - 1)->stop();
@@ -27,22 +30,26 @@ SceneManager::~SceneManager()
 
 void SceneManager::pushViewController(const ViewController::Ptr& controller, bool withAnimation/* = false*/)
 {
-    cocos2d::Scene* pScene = cocos2d::Scene::create();
-    pScene->addChild(controller->getView());
-    auto pDirector = cocos2d::Director::getInstance();
-    if(!pDirector->getRunningScene())
-    {
-        _controllerStack.push_back(controller);
-        pDirector->runWithScene(pScene);
-    }
-    else
-    {
-        auto pLast = _controllerStack.at(_controllerStack.size() - 1);
-        pLast->pause();
-        _controllerStack.push_back(controller);
-        pDirector->pushScene(pScene);
-    }
-    controller->start();
+    _pNextController = controller;
+    cocos2d::Director::getInstance()->getScheduler()->schedule([this](float dt){
+        cocos2d::Scene* pScene = cocos2d::Scene::create();
+        pScene->addChild(_pNextController->getView());
+        auto pDirector = cocos2d::Director::getInstance();
+        if(!pDirector->getRunningScene())
+        {
+            _controllerStack.push_back(_pNextController);
+            pDirector->runWithScene(pScene);
+        }
+        else
+        {
+            auto pLast = _controllerStack.at(_controllerStack.size() - 1);
+            pLast->pause();
+            _controllerStack.push_back(_pNextController);
+            pDirector->pushScene(pScene);
+        }
+        _pNextController->start();
+        _pNextController = nullptr;
+    }, this, 0, 0, 0, false, KEY_PUSH_VIEW_CONTROLLER);
 }
 
 void SceneManager::popViewController(bool withAnimation/* = false*/)

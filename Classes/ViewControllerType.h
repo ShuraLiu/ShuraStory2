@@ -12,6 +12,7 @@
 enum class ViewControllerType : int
 {
     LoadingViewController,
+    TitleViewController,
 };
 
 

@@ -37,6 +37,8 @@ public:
     
 private:
     ControllerArray _controllerStack;
+    
+    ViewController::Ptr _pNextController;
 };
 
 #endif /* defined(__ShuraStory__SceneManager__) */

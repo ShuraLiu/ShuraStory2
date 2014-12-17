@@ -49,7 +49,6 @@ bool AppDelegate::applicationDidFinishLaunching() {
     
     LoadingLayerController::Ptr pController(new LoadingLayerController());
     SceneManager::getInstance().pushViewController(pController);
-
     return true;
 }
 

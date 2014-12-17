@@ -6,6 +6,10 @@
         <Project Name="HomeScene.csd" />
         <Project Name="SubLayer.csd" />
         <Project Name="LoadingScene.csd" />
+        <Project Name="TitleScene.csd" />
+        <PlistImageFolder PListFile="home_background.plist" LastPlistWriteTime="2014-12-18T00:00:20+08:00" LastImageWriteTime="2014-12-18T00:00:20+08:00" Name=".home_background_PList.Dir">
+          <PlistImageFile Name="home_background.png" Key="home_background.png" />
+        </PlistImageFolder>
       </RootFolder>
     </Group>
   </SolutionFolder>

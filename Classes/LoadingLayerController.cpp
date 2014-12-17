@@ -7,8 +7,10 @@
 //
 
 #include "LoadingLayerController.h"
+#include "TitleLayerController.h"
 #include "LoadingLayer.h"
 #include "ResourceManager.h"
+#include "SceneManager.h"
 
 LoadingLayerController::LoadingLayerController()
 {
@@ -27,6 +29,8 @@ LoadingLayerController::LoadingLayerController()
     
     pListener = pDispatcher->addCustomEventListener(custom_event::ResourceLoadProgressEvent<custom_event::IDResourceLoadProgressEvent::End>::NAME, [](cocos2d::EventCustom* event){
         custom_event::ResourceLoadProgressEvent<custom_event::IDResourceLoadProgressEvent::End>* pData = (decltype(pData)) event->getUserData();
+        TitleLayerController::Ptr pController(new TitleLayerController());
+        SceneManager::getInstance().pushViewController(pController);
     });
     pListener->retain();
     _listeners.push_back(pListener);
