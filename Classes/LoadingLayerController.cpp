@@ -9,26 +9,27 @@
 #include "LoadingLayerController.h"
 #include "TitleLayerController.h"
 #include "LoadingLayer.h"
-#include "ResourceManager.h"
+#include "ResourcePreloadManager.h"
 #include "SceneManager.h"
 
 LoadingLayerController::LoadingLayerController()
 {
     auto pDispatcher = cocos2d::Director::getInstance()->getEventDispatcher();
-    auto pListener = pDispatcher->addCustomEventListener(custom_event::ResourceLoadProgressEvent<custom_event::IDResourceLoadProgressEvent::Start>::NAME, [](cocos2d::EventCustom* event){
-        custom_event::ResourceLoadProgressEvent<custom_event::IDResourceLoadProgressEvent::Start>* pData = (decltype(pData)) event->getUserData();
+    auto pListener = pDispatcher->addCustomEventListener(custom_event::ResourcePreloadEvent<custom_event::IDResourcePreloadEvent::PreloadStart>::NAME, [](cocos2d::EventCustom* event){
+        custom_event::ResourcePreloadEvent<custom_event::IDResourcePreloadEvent::PreloadStart>* pData = (decltype(pData)) event->getUserData();
     });
     pListener->retain();
     _listeners.push_back(pListener);
     
-    pListener = pDispatcher->addCustomEventListener(custom_event::ResourceLoadProgressEvent<custom_event::IDResourceLoadProgressEvent::Progress>::NAME, [](cocos2d::EventCustom* event){
-        custom_event::ResourceLoadProgressEvent<custom_event::IDResourceLoadProgressEvent::Progress>* pData = (decltype(pData)) event->getUserData();
+    pListener = pDispatcher->addCustomEventListener(custom_event::ResourcePreloadEvent<custom_event::IDResourcePreloadEvent::PreloadProgress>::NAME, [](cocos2d::EventCustom* event){
+        custom_event::ResourcePreloadEvent<custom_event::IDResourcePreloadEvent::PreloadProgress>* pData = (decltype(pData)) event->getUserData();
     });
     pListener->retain();
     _listeners.push_back(pListener);
     
-    pListener = pDispatcher->addCustomEventListener(custom_event::ResourceLoadProgressEvent<custom_event::IDResourceLoadProgressEvent::End>::NAME, [](cocos2d::EventCustom* event){
-        custom_event::ResourceLoadProgressEvent<custom_event::IDResourceLoadProgressEvent::End>* pData = (decltype(pData)) event->getUserData();
+    pListener = pDispatcher->addCustomEventListener(custom_event::ResourcePreloadEvent<custom_event::IDResourcePreloadEvent::PreloadEnd>::NAME, [](cocos2d::EventCustom* event){
+        custom_event::ResourcePreloadEvent<custom_event::IDResourcePreloadEvent::PreloadEnd>* pData = (decltype(pData)) event->getUserData();
+        
         TitleLayerController::Ptr pController(new TitleLayerController());
         SceneManager::getInstance().pushViewController(pController);
     });
@@ -55,5 +56,5 @@ cocos2d::Node* LoadingLayerController::getView()
 void LoadingLayerController::onStart()
 {
     CCLOG("[LoadingLayerController][onStart]");
-    ResourceManager::getInstance().load("GroupTitle");
+    ResourcePreloadManager::getInstance().startLoadResource("GroupTitle");
 }

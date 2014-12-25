@@ -10,13 +10,13 @@
 		1A11777D1A344A1100483136 /* ViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A11777B1A344A1100483136 /* ViewController.cpp */; };
 		1A1177801A345B5E00483136 /* LifeCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A11777E1A345B5E00483136 /* LifeCircle.cpp */; };
 		1A1177871A34A29E00483136 /* DesignResolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A1177851A34A29E00483136 /* DesignResolution.cpp */; };
-		1A1D8A9D1A2770CF00804D47 /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D8A9B1A2770CF00804D47 /* ResourceManager.cpp */; };
 		1A1D8AA11A2773D700804D47 /* ResourceConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D8A9F1A2773D700804D47 /* ResourceConfig.cpp */; };
 		1A1D8AA31A27787B00804D47 /* ResourceConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1A1D8AA21A27787B00804D47 /* ResourceConfig.xml */; };
-		1A6182931A2AABEA002BC80B /* ResourceLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6182911A2AABEA002BC80B /* ResourceLoader.cpp */; };
 		1A6A106E1A388DAD00ADDE5C /* BaseView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A106C1A388DAD00ADDE5C /* BaseView.cpp */; };
 		1A6AE13A1A30AB5D004FA301 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AE1381A30AB5D004FA301 /* SceneManager.cpp */; };
 		1A6AE1431A30B6FF004FA301 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AE1411A30B6FF004FA301 /* GameScene.cpp */; };
+		1AAE89061A4C6BA200D8EEAA /* ResourcePreloadManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE89021A4C6BA200D8EEAA /* ResourcePreloadManager.cpp */; };
+		1AAE89071A4C6BA200D8EEAA /* ResourcePreloadWorker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE89041A4C6BA200D8EEAA /* ResourcePreloadWorker.cpp */; };
 		1AC6AE721A432121008C4BF6 /* Role.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AC6AE701A432121008C4BF6 /* Role.cpp */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
@@ -119,13 +119,9 @@
 		1A11777F1A345B5E00483136 /* LifeCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifeCircle.h; sourceTree = "<group>"; };
 		1A1177851A34A29E00483136 /* DesignResolution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DesignResolution.cpp; sourceTree = "<group>"; };
 		1A1177861A34A29E00483136 /* DesignResolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignResolution.h; sourceTree = "<group>"; };
-		1A1D8A9B1A2770CF00804D47 /* ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceManager.cpp; sourceTree = "<group>"; };
-		1A1D8A9C1A2770CF00804D47 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
 		1A1D8A9F1A2773D700804D47 /* ResourceConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceConfig.cpp; sourceTree = "<group>"; };
 		1A1D8AA01A2773D700804D47 /* ResourceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceConfig.h; sourceTree = "<group>"; };
 		1A1D8AA21A27787B00804D47 /* ResourceConfig.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ResourceConfig.xml; sourceTree = "<group>"; };
-		1A6182911A2AABEA002BC80B /* ResourceLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceLoader.cpp; sourceTree = "<group>"; };
-		1A6182921A2AABEA002BC80B /* ResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceLoader.h; sourceTree = "<group>"; };
 		1A6A106C1A388DAD00ADDE5C /* BaseView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseView.cpp; sourceTree = "<group>"; };
 		1A6A106D1A388DAD00ADDE5C /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		1A6A107B1A38A93900ADDE5C /* ViewControllerType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerType.h; sourceTree = "<group>"; };
@@ -133,6 +129,11 @@
 		1A6AE1391A30AB5D004FA301 /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
 		1A6AE1411A30B6FF004FA301 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
 		1A6AE1421A30B6FF004FA301 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		1AA1BAD31A49B50800F4C287 /* SAConsumer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAConsumer.h; sourceTree = "<group>"; };
+		1AAE89021A4C6BA200D8EEAA /* ResourcePreloadManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourcePreloadManager.cpp; sourceTree = "<group>"; };
+		1AAE89031A4C6BA200D8EEAA /* ResourcePreloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourcePreloadManager.h; sourceTree = "<group>"; };
+		1AAE89041A4C6BA200D8EEAA /* ResourcePreloadWorker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourcePreloadWorker.cpp; sourceTree = "<group>"; };
+		1AAE89051A4C6BA200D8EEAA /* ResourcePreloadWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourcePreloadWorker.h; sourceTree = "<group>"; };
 		1AB379371A2B32700011D57D /* CustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEvent.h; sourceTree = "<group>"; };
 		1AC6AE701A432121008C4BF6 /* Role.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Role.cpp; sourceTree = "<group>"; };
 		1AC6AE711A432121008C4BF6 /* Role.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Role.h; sourceTree = "<group>"; };
@@ -280,12 +281,12 @@
 		1A6182901A2AAB8B002BC80B /* resouce_config */ = {
 			isa = PBXGroup;
 			children = (
-				1A1D8A9B1A2770CF00804D47 /* ResourceManager.cpp */,
-				1A1D8A9C1A2770CF00804D47 /* ResourceManager.h */,
+				1AAE89021A4C6BA200D8EEAA /* ResourcePreloadManager.cpp */,
+				1AAE89031A4C6BA200D8EEAA /* ResourcePreloadManager.h */,
+				1AAE89041A4C6BA200D8EEAA /* ResourcePreloadWorker.cpp */,
+				1AAE89051A4C6BA200D8EEAA /* ResourcePreloadWorker.h */,
 				1A1D8A9F1A2773D700804D47 /* ResourceConfig.cpp */,
 				1A1D8AA01A2773D700804D47 /* ResourceConfig.h */,
-				1A6182911A2AABEA002BC80B /* ResourceLoader.cpp */,
-				1A6182921A2AABEA002BC80B /* ResourceLoader.h */,
 			);
 			name = resouce_config;
 			sourceTree = "<group>";
@@ -343,6 +344,14 @@
 			children = (
 			);
 			name = game;
+			sourceTree = "<group>";
+		};
+		1AA1BAD21A49B3F700F4C287 /* shura */ = {
+			isa = PBXGroup;
+			children = (
+				1AA1BAD31A49B50800F4C287 /* SAConsumer.h */,
+			);
+			name = shura;
 			sourceTree = "<group>";
 		};
 		1AC6AE6F1A431F65008C4BF6 /* model */ = {
@@ -417,6 +426,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1AA1BAD21A49B3F700F4C287 /* shura */,
 				1AC6AE6F1A431F65008C4BF6 /* model */,
 				1A6AE1441A30B7A5004FA301 /* game */,
 				1A6AE1371A30AB38004FA301 /* ui */,
@@ -625,10 +635,10 @@
 			files = (
 				1A6AE1431A30B6FF004FA301 /* GameScene.cpp in Sources */,
 				1A6A106E1A388DAD00ADDE5C /* BaseView.cpp in Sources */,
+				1AAE89061A4C6BA200D8EEAA /* ResourcePreloadManager.cpp in Sources */,
 				1A1177801A345B5E00483136 /* LifeCircle.cpp in Sources */,
 				1A11777D1A344A1100483136 /* ViewController.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
-				1A6182931A2AABEA002BC80B /* ResourceLoader.cpp in Sources */,
 				1A1177871A34A29E00483136 /* DesignResolution.cpp in Sources */,
 				1AFA3B631A41D494002B039E /* LoadingLayerController.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
@@ -637,10 +647,10 @@
 				1A6AE13A1A30AB5D004FA301 /* SceneManager.cpp in Sources */,
 				1AFA3B5D1A41CE55002B039E /* LoadingLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				1AAE89071A4C6BA200D8EEAA /* ResourcePreloadWorker.cpp in Sources */,
 				1A1D8AA11A2773D700804D47 /* ResourceConfig.cpp in Sources */,
 				1AFA3B691A41DEB8002B039E /* TitleLayer.cpp in Sources */,
 				1AFA3B6C1A41E09E002B039E /* TitleLayerController.cpp in Sources */,
-				1A1D8A9D1A2770CF00804D47 /* ResourceManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

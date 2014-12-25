@@ -8,7 +8,7 @@
 
 #include "TitleLayerController.h"
 #include "TitleLayer.h"
-#include "ResourceManager.h"
+#include "ResourcePreloadManager.h"
 
 TitleLayerController::TitleLayerController()
 {
